@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "LujI+ctwG7tzYbNkhz483r45UXfdd053PGKz4LvqVjEkJqXgwFziF2TuvX6Poz4YtcRpIA8Pu+ro46banM+sGQ==",
+  "dgSpecHash": "xAWwy8HnJ+2TnNVqH/ysHx4DGStLbTxfZGABF7jKX3qS91SZissxrkUDDpH2OyJYLiWON09ysuIdCdj3s/82qA==",
   "success": true,
-  "projectFilePath": "D:\\Учеба\\Академ\\ТРПО\\Questionnaire\\Question_app_v1\\Question_app_v1.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "D:\\Git\\Questionnaire-app\\Questionnaire\\Question_app_v1\\Question_app_v1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Andron\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.25\\microsoft.windowsdesktop.app.ref.6.0.25.nupkg.sha512",
+    "C:\\Users\\Andron\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.25\\microsoft.netcore.app.ref.6.0.25.nupkg.sha512",
+    "C:\\Users\\Andron\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.25\\microsoft.aspnetcore.app.ref.6.0.25.nupkg.sha512",
+    "C:\\Users\\Andron\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.25\\microsoft.netcore.app.host.win-x64.6.0.25.nupkg.sha512"
+  ],
   "logs": []
 }
