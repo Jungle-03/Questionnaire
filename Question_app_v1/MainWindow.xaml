@@ -6,15 +6,43 @@
         xmlns:local="clr-namespace:Question_app_v1"
         mc:Ignorable="d"
         Title="Выбор темы" Height="450" Width="800">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="0,10,0,0"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Background" Value="#4CAF50"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="10">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style TargetType="Grid">
+            <Setter Property="Background" Value="#E0E0E0"/>
+        </Style>
+        <Style TargetType="TextBlock">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="0,78,0,0"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+            <Setter Property="Height" Value="17"/>
+            <Setter Property="Width" Value="96"/>
+        </Style>
+    </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0*"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <TextBlock HorizontalAlignment="Center" Margin="0,78,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="17" Width="96" Grid.Column="1" ><Run Language="ru-ru" Text="Выберите тему"/></TextBlock>
-        <Button Content="Прогноз погоды " Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="52,0,0,0" VerticalAlignment="Center" Height="50" Width="130" Click="Weather_forecast_clik"/>
+        <Button Content="Прогноз погоды" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="52,0,0,0" VerticalAlignment="Center" Height="50" Width="130" Click="Weather_forecast_clik"/>
         <Button Content="Дней до даты" HorizontalAlignment="Center" VerticalAlignment="Center" Height="50" Width="133" Click="Forecast_for_the_year_click" Grid.Column="1"/>
-        <Button Content="Тип темпирамента" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="616,0,0,0" VerticalAlignment="Center" Height="50" Width="129" Click="Temperament_type_click"/>
-
+        <Button Content="Тип темперамента" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="616,0,0,0" VerticalAlignment="Center" Height="50" Width="129" Click="Temperament_type_click"/>
     </Grid>
 </Window>

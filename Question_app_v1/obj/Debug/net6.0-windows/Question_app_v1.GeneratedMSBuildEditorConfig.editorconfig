@@ -8,6 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Question_app_v1
-build_property.ProjectDir = D:\Git\Questionnaire-app\Questionnaire\Question_app_v1\
-build_property.EnableComHosting = 
-build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.ProjectDir = D:\Учеба\Академ\ТРПО\Questionnaire\Questionnaire\Question_app_v1\

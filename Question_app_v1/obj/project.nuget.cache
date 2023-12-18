@@ -1,13 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "xAWwy8HnJ+2TnNVqH/ysHx4DGStLbTxfZGABF7jKX3qS91SZissxrkUDDpH2OyJYLiWON09ysuIdCdj3s/82qA==",
+  "dgSpecHash": "atdnpjtcDAgNtHWdE2PCRZe4Qz+yjnBIMZwTeKoV2jmMSooL5ulGbaV9m1xtzGGryILv8uFcnhXCz0UMjvsXhQ==",
   "success": true,
-  "projectFilePath": "D:\\Git\\Questionnaire-app\\Questionnaire\\Question_app_v1\\Question_app_v1.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\Andron\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.25\\microsoft.windowsdesktop.app.ref.6.0.25.nupkg.sha512",
-    "C:\\Users\\Andron\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.25\\microsoft.netcore.app.ref.6.0.25.nupkg.sha512",
-    "C:\\Users\\Andron\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.25\\microsoft.aspnetcore.app.ref.6.0.25.nupkg.sha512",
-    "C:\\Users\\Andron\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.25\\microsoft.netcore.app.host.win-x64.6.0.25.nupkg.sha512"
-  ],
+  "projectFilePath": "D:\\Учеба\\Академ\\ТРПО\\Questionnaire\\Questionnaire\\Question_app_v1\\Question_app_v1.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }

@@ -20,8 +20,8 @@ namespace Question_app_v1
     /// </summary>
     public partial class Temperament : Window
     {
-        private int score1;
-        private int score2;
+        public int score1;
+        public int score2;
         public Temperament()
         {
             InitializeComponent();
@@ -29,31 +29,72 @@ namespace Question_app_v1
 
         private void CompleteQuiz_Click(object sender, RoutedEventArgs e)
         {
-            CalculateScores();
+            // Суммируем баллы из выбранных CheckBox'ов
+            int totalPoints = GetTotalPoints();
 
-            // Определяем тип темперамента
-            string temperamentType = "";
-            if (score1 < 5 && score2 < 5)
-                temperamentType = "Флегматик";
-            else if (score1 < 5 && score2 >= 5)
-                temperamentType = "Меланхолик";
-            else if (score1 >= 5 && score2 < 5)
-                temperamentType = "Сангвиник";
-            else
-                temperamentType = "Холерик";
-
-            resultTextBlock.Text = $"Ваш тип темперамента: {temperamentType}";
+            // Определяем темперамент и выводим результат
+            string temperament = DetermineTemperament(totalPoints);
+            resultTextBlock.Text = $"Ваш темперамент: {temperament}";
         }
-
-        private void CalculateScores()
+        private int GetTotalPoints()
         {
-            score1 = CalculateQuestionScore(CheckBox1_1, CheckBox1_2, CheckBox1_3);
-            score2 = CalculateQuestionScore(CheckBox2_1, CheckBox2_2, CheckBox2_3);
+            int totalPoints = 0;
+
+            // Проходим по всем CheckBox'ам и суммируем баллы
+            foreach (CheckBox checkBox in FindVisualChildren<CheckBox>(this))
+            {
+                if (checkBox.IsChecked == true)
+                {
+                    // Получаем баллы из Tag (присвойте нужные баллы в Tag каждому CheckBox'у)
+                    if (int.TryParse(checkBox.Tag?.ToString(), out int points))
+                    {
+                        totalPoints += points;
+                    }
+                }
+            }
+
+            return totalPoints;
         }
-
-        private int CalculateQuestionScore(params CheckBox[] checkBoxes)
+        private string DetermineTemperament(int totalPoints)
         {
-            return checkBoxes.Count(checkBox => checkBox.IsChecked == true);
+            if (totalPoints == 10)
+            {
+                return "Флегматик";
+            }
+            else if (totalPoints >= 11 && totalPoints <= 15)
+            {
+                return "Сангвиник";
+            }
+            else if (totalPoints >= 15 && totalPoints <= 19)
+            {
+                return "Флегматик";
+            }
+            else if (totalPoints >= 20)
+            {
+                return "Холерик";
+            }
+
+            return "Не удалось определить темперамент";
+        }
+        // Вспомогательная функция для поиска всех дочерних элементов заданного типа
+        private static System.Collections.Generic.IEnumerable<T> FindVisualChildren<T>(DependencyObject depObj) where T : DependencyObject
+        {
+            if (depObj != null)
+            {
+                for (int i = 0; i < VisualTreeHelper.GetChildrenCount(depObj); i++)
+                {
+                    DependencyObject child = VisualTreeHelper.GetChild(depObj, i);
+                    if (child != null && child is T)
+                    {
+                        yield return (T)child;
+                    }
+
+                    foreach (T childOfChild in FindVisualChildren<T>(child))
+                    {
+                        yield return childOfChild;
+                    }
+                }
+            }
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -62,7 +103,9 @@ namespace Question_app_v1
             mainWindow.Show();
             this.Close();
         }
+
     }
 }
+
 
 

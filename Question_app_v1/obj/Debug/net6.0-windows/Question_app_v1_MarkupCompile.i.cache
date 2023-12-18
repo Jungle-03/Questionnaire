@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\Git\Questionnaire-app\Questionnaire\Question_app_v1\obj\Debug\net6.0-windows\
+D:\Учеба\Академ\ТРПО\Questionnaire\Questionnaire\Question_app_v1\obj\Debug\net6.0-windows\
 Question_app_v1
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-D:\Git\Questionnaire-app\Questionnaire\Question_app_v1\App.xaml
+D:\Учеба\Академ\ТРПО\Questionnaire\Questionnaire\Question_app_v1\App.xaml
 4-1860874311
 
 8474320423
-194-1288502036
+194183970531
 MainWindow.xaml;Temperament.xaml;Weather_forecast.xaml;Year_forecast.xaml;
 
-True
+False
 

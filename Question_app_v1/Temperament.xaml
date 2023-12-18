@@ -6,60 +6,97 @@
         xmlns:local="clr-namespace:Question_app_v1"
         mc:Ignorable="d"
         Title="Тип темперамента" Height="450" Width="800">
+    <Window.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="Margin" Value="0,0,0,10"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Foreground" Value="#333333"/>
+        </Style>
+        <Style TargetType="CheckBox">
+            <Setter Property="Margin" Value="0,5,0,5"/>
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="Foreground" Value="#333333"/>
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="0,10,0,0"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Background" Value="#4CAF50"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="10">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style TargetType="StackPanel">
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="Background" Value="#E0E0E0"/>
+        </Style>
+        <Style TargetType="Grid">
+            <Setter Property="Background" Value="#E0E0E0"/>
+        </Style>
+    </Window.Resources>
     <Grid>
         <ScrollViewer>
         <StackPanel Margin="10">
-            <TextBlock Text="Вопрос 1: Как вы относитесь к новым знакомствам?" Margin="0,0,0,10"/>
-            <CheckBox Content="Открыто и с легкостью завожу новые знакомства" Name="CheckBox1_1"/>
-            <CheckBox Content="Не очень общителен, предпочитаю близких друзей" Name="CheckBox1_2"/>
-            <CheckBox Content="Осторожен, мне нужно время для установления связей" Name="CheckBox1_3"/>
+            <TextBlock Text="Вопрос 1: Как вы относитесь к новым знакомствам?" Margin="0,0,0,10" Tag="5"/>
+                <CheckBox Content="Открыто и с легкостью завожу новые знакомства" Name="CheckBox1_1" Tag="5"/>
+                <CheckBox Content="Не очень общителен, предпочитаю близких друзей" Name="CheckBox1_2" Tag="2"/>
+                <CheckBox Content="Осторожен, мне нужно время для установления связей" Name="CheckBox1_3" Tag="1"/>
             <TextBlock Text="Вопрос 2: Как вы реагируете на стресс?" Margin="0,10,0,10"/>
-            <CheckBox Content="Легко переношу стресс, быстро нахожу решения" Name="CheckBox2_1"/>
-            <CheckBox Content="Могу переживать, но стараюсь не показывать" Name="CheckBox2_2"/>
-            <CheckBox Content="Чувствую сильное напряжение, мне сложно справляться" Name="CheckBox2_3"/>
+                <CheckBox Content="Легко переношу стресс, быстро нахожу решения" Name="CheckBox2_1" Tag="5"/>
+                <CheckBox Content="Могу переживать, но стараюсь не показывать" Name="CheckBox2_2" Tag="3" />
+                <CheckBox Content="Чувствую сильное напряжение, мне сложно справляться" Name="CheckBox2_3" Tag="2"/>
 
-            <TextBlock Text="Вопрос 3: Насколько вы усидчивы?" Margin="0,10,0,10"/>
-            <CheckBox Content="Легко могу просидеть пол дня (например за компьютером)" Name="CheckBox3_1"/>
-            <CheckBox Content="Не могу сидеть слишком долго на одном месте" Name="CheckBox3_2"/>
-            <CheckBox Content="Мне тяжело усидеть на месте" Name="CheckBox3_3"/>
+                <TextBlock Text="Вопрос 3: Насколько вы усидчивы?" Margin="0,10,0,10" Tag="2"/>
+                <CheckBox Content="Легко могу просидеть пол дня (например за компьютером)" Name="CheckBox3_1" Tag="7"/>
+                <CheckBox Content="Не могу сидеть слишком долго на одном месте" Name="CheckBox3_2" Tag="2" />
+                <CheckBox Content="Мне тяжело усидеть на месте" Name="CheckBox3_3" Tag="2"/>
 
             <TextBlock Text="Вопрос 4: Оцените свой уровень вспыльчивости" Margin="0,10,0,10"/>
-            <CheckBox Content="Я сдержанный человек" Name="CheckBox4_1"/>
-            <CheckBox Content="Иногда могу разозлиться" Name="CheckBox4_2"/>
-            <CheckBox Content="Меня легко разозлить" Name="CheckBox4_3"/>
+                <CheckBox Content="Я сдержанный человек" Name="CheckBox4_1" Tag="6"/>
+                <CheckBox Content="Иногда могу разозлиться" Name="CheckBox4_2" Tag="1"/>
+                <CheckBox Content="Меня легко разозлить" Name="CheckBox4_3" Tag="9"/>
 
             <TextBlock Text="Вопрос 5: Как вам больше нравится работать?" Margin="0,10,0,10"/>
-            <CheckBox Content="Мне легче в работать команде" Name="CheckBox5_1"/>
-            <CheckBox Content="И так и так" Name="CheckBox5_2"/>
-            <CheckBox Content="Мне легче работать одному" Name="CheckBox5_3"/>
+                <CheckBox Content="Мне легче в работать команде" Name="CheckBox5_1" Tag="3"/>
+                <CheckBox Content="И так и так" Name="CheckBox5_2" Tag="2"/>
+                <CheckBox Content="Мне легче работать одному" Name="CheckBox5_3" Tag="1"/>
 
             <TextBlock Text="Вопрос 6: Случается ли, что люди задают вам вопросы типа “Почему ты такой грустный?”, хотя вы в нормальном настроении?" Margin="0,10,0,10"/>
-            <CheckBox Content="Да" Name="CheckBox6_1"/>
-            <CheckBox Content="Нет" Name="CheckBox6_2"/>
+                <CheckBox Content="Да" Name="CheckBox6_1" Tag="2"/>
+                <CheckBox Content="Нет" Name="CheckBox6_2" Tag="1"/>
             <!--<CheckBox Content="Мне легче работать одному" Name="CheckBox6_3"/>-->
 
-            <TextBlock Text="Вопрос 7: Какой тип речи у вас преобладает?" Margin="0,10,0,10"/>
-            <CheckBox Content="Медленная, со слабой мимикой" Name="CheckBox7_1"/>
-            <CheckBox Content="Бывает по-разному" Name="CheckBox7_2"/>
-            <CheckBox Content="Громкая, быстрая, с активной мимикой" Name="CheckBox7_3"/>
+                <TextBlock Text="Вопрос 7: Какой тип речи у вас преобладает?" Margin="0,10,0,10" Tag="1"/>
+                <CheckBox Content="Медленная, со слабой мимикой" Name="CheckBox7_1" Tag="5"/>
+                <CheckBox Content="Бывает по-разному" Name="CheckBox7_2" Tag="4"/>
+                <CheckBox Content="Громкая, быстрая, с активной мимикой" Name="CheckBox7_3" Tag="1"/>
 
             <TextBlock Text="Вопрос 8: Как вы чаще всего чувствуете себя перед важным событием, не имеет значения - хорошим или плохим? " Margin="0,10,0,10"/>
-            <CheckBox Content="Остаюсь спокойным или немного нервничаю, но верю, что все будет хорошо" Name="CheckBox8_1"/>
-            <CheckBox Content="Когда как" Name="CheckBox8_2"/>
-            <CheckBox Content="Сильно нервничаю, могу сорваться" Name="CheckBox8_3"/>
+                <CheckBox Content="Остаюсь спокойным или немного нервничаю, но верю, что все будет хорошо" Name="CheckBox8_1" Tag="2"/>
+                <CheckBox Content="Когда как" Name="CheckBox8_2" Tag="5"/>
+                <CheckBox Content="Сильно нервничаю, могу сорваться" Name="CheckBox8_3" Tag="1"/>
 
             <TextBlock Text="Вопрос 9: Часто ли у вас меняется настроение без веских на то причин?" Margin="0,10,0,10"/>
-            <CheckBox Content="Нет" Name="CheckBox9_1"/>
-            <CheckBox Content="Редко" Name="CheckBox9_2"/>
-            <CheckBox Content="Часто" Name="CheckBox9_3"/>
+                <CheckBox Content="Нет" Name="CheckBox9_1" Tag="1"/>
+                <CheckBox Content="Редко" Name="CheckBox9_2" Tag="6"/>
+                <CheckBox Content="Часто" Name="CheckBox9_3" Tag="2"/>
 
             <TextBlock Text="Вопрос 10: Можете ли вы успешно справляться сразу с несколькими задачами?" Margin="0,10,0,10"/>
-            <CheckBox Content="Нет" Name="CheckBox10_1"/>
-            <CheckBox Content="Смотря с какими" Name="CheckBox10_2"/>
-            <CheckBox Content="Да" Name="CheckBox10_3"/>
+                <CheckBox Content="Нет" Name="CheckBox10_1" Tag="5"/>
+                <CheckBox Content="Смотря с какими" Name="CheckBox10_2" Tag="4"/>
+                <CheckBox Content="Да" Name="CheckBox10_3" Tag="2"/>
 
-            <TextBlock x:Name="resultTextBlock" Text="" FontWeight="Bold" Margin="0,20,0,0"/>
-            <Button Content="Завершить опрос" Click="CompleteQuiz_Click" Margin="0,10,0,0"/>
+                <TextBlock x:Name="resultTextBlock" Text="" FontWeight="Bold" Margin="0,20,0,0"/>
+            <Button Content="Завершить опрос" Click="CompleteQuiz_Click" Margin="0,10,0,0" Height="42" />
             <Button Content="Вернуться" HorizontalAlignment="Left" Margin="0 125 0 0" Height="45" Width="107" Click="Button_Click"/>
         </StackPanel>
         </ScrollViewer>

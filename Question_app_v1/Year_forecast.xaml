@@ -6,10 +6,37 @@
         xmlns:local="clr-namespace:Question_app_v1"
         mc:Ignorable="d"
         Title="Дней до даты" Height="450" Width="800">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="0,10,0,0"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Background" Value="#4CAF50"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="10">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style TargetType="Grid">
+            <Setter Property="Background" Value="#E0E0E0"/>
+        </Style>
+        <Style TargetType="TextBlock">
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="Margin" Value="10,230,0,0"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+            <Setter Property="Width" Value="50"/>
+        </Style>
+    </Window.Resources>
     <Grid>
         <Calendar Name="myCalendar" SelectedDatesChanged="Calendar_SelectedDatesChanged"/>
-        <TextBlock Name="daysDifferenceTextBlock" HorizontalAlignment="Left" Margin="10,230,0,0" VerticalAlignment="Top" Width="300"/>
+        <TextBlock Name="daysDifferenceTextBlock" Height="23" Width="170"/>
         <Button Content="Вернуться" HorizontalAlignment="Left" Margin="62,375,0,0" VerticalAlignment="Top" Height="34" Width="98" Click="Button_Click"/>
     </Grid>
-
 </Window>
